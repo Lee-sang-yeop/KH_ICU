@@ -57,7 +57,7 @@
   ## :computer: Tool	
 <div>
 	<img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white" />
-	<img src="resources/images/Notion-logo-removebg-preview.png"/>
+	<img src="https://img.shields.io/badge/Notion-ffffff?style=flat-square&logo=Notion&logoColor=black"/>
 	<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />	
 </div>
 
