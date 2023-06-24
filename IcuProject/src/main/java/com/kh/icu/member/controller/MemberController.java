@@ -617,30 +617,30 @@ public class MemberController {
 	/**
 	 * 프로필사진 삭제
 	 */
-	@RequestMapping("deleteImg.me")
-	@ResponseBody
-	public String deleteImg(int fileNo, HttpSession session, MultipartFile upfile) {
-		
-		Image profile = (Image) session.getAttribute("profile");
-		
-		int result = memberService.deleteImg(fileNo);
-		
-				
-		
-		if(result > 0) {
-			File path = new File(application.getRealPath("/resources/profileImg"));
-			new File(path+profile.getChangeName()).delete();
-			
-			session.removeAttribute("profile");
-			
-			return "1";
-		} else {
-			
-			return "0";
-		}
-	
-		
-	}
+//	@RequestMapping("deleteImg.me")
+//	@ResponseBody
+//	public String deleteImg(int fileNo, HttpSession session, MultipartFile upfile) {
+//		
+//		Image profile = (Image) session.getAttribute("profile");
+//		
+//		int result = memberService.deleteImg(fileNo);
+//		
+//				
+//		
+//		if(result > 0) {
+//			File path = new File(application.getRealPath("/resources/profileImg"));
+//			new File(path+profile.getChangeName()).delete();
+//			
+//			session.removeAttribute("profile");
+//			
+//			return "1";
+//		} else {
+//			
+//			return "0";
+//		}
+//	
+//		
+//	}
 	
 	
 	

@@ -207,32 +207,32 @@
         location.reload();
       }
 
-      function deleteBtn() {
-        console.log("${profile.fileNo}");
-        $.ajax({
-          url: "${contextPath}/deleteImg.me",
-          data: {
-            fileNo: "${profile.fileNo}"
-          },
-          type: "post",
-          success: function (result) {
-            if (result == "1") {
+//       function deleteBtn() {
+//         console.log("${profile.fileNo}");
+//         $.ajax({
+//           url: "${contextPath}/deleteImg.me",
+//           data: {
+//             fileNo: "${profile.fileNo}"
+//           },
+//           type: "post",
+//           success: function (result) {
+//             if (result == "1") {
 
-              return "redirect:myPage.me";
+//               return "redirect:myPage.me";
 
 
-            } else {
-              Swal.fire({
-                icon: 'error',
-                title: '프로필 삭제 실패.'
-              });
-            }
-          }
+//             } else {
+//               Swal.fire({
+//                 icon: 'error',
+//                 title: '프로필 삭제 실패.'
+//               });
+//             }
+//           }
 
-        });
-        refreshProfile();
+//         });
+//         refreshProfile();
 
-      }
+//       }
 
       function btnUpdate() {
 
@@ -345,6 +345,12 @@
             break;
         }
       });
+
+      document.addEventListener('keydown', function(event) {
+	      if (event.keyCode === 13) {
+	        event.preventDefault();
+	      };
+       }, true);
     </script>
 </body>
 </html>

@@ -125,7 +125,6 @@
             const boardWriter = "${b.boardWriter}";
             const boardNo = "${b.boardNo}";
             const boardWriterNo = "${b.boardWriterNo}";	
-
             
                function insertReply(){
                   $.ajax({

@@ -1,9 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!-- 일반 게시판 리스트 -->
 <c:set var="list" value="${map.list }"/>
-<c:set var="pi" value="${map.pi }"/>
+
+<!-- 공지사항 리스트 -->
 <c:set var="notice" value="${map.notice }"/>
+
+<!-- 페이징처리 -->
+<c:set var="pi" value="${map.pi }"/>
 
 <c:if test="${!empty param.condition }">
 	<c:set var="sUrl" value="&condition=${param.condition}&keyword=${param.keyword }"/>
@@ -60,7 +66,7 @@
 					
 					<c:if test="${empty list }">
 						<tr id="tableEmpty">
-							<td colspan="5">게시글이 없습니다..</td>
+							<td colspan="5">게시글이 없습니다.</td>
 						</tr>
 					</c:if>
 					
@@ -85,19 +91,7 @@
 			function movePage(bno){
 		 		location.href = "${contextPath}/detail/"+bno;
 		 	}
-			
-			/* $(function(){
-	            $("#boardList>tbody>tr").click(function(){
-	               
-// 	               if($(this.text() != $("#tableEmpty").text()){ // 클릭방지 기능 구현중.
 
-	                  let bno = $(this).children().eq(0).text();
-	                  
-	                  location.href="${contextPath}/detail.bo/"+bno;
-// 	               } 
-
-	            });
-	         }); */
 			</script>
 			
 			
@@ -109,6 +103,7 @@
 						<option value="title">제목</option>
 						<option value="writer">작성자</option>
 						<option value="content">내용</option>
+						
 					</select>
 				</div>
 				<div class="text">
